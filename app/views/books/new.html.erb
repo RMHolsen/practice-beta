@@ -1,0 +1,14 @@
+<h1>Add a Book</h1>
+<%= form_tag books_path do %>
+<p><label>Book Title</label> <%= text_field_tag :title %></p>
+<p><label>Author</label> <%= text_field_tag :author %></p>
+<p><label>Summary</label> <%= text_area_tag :summary %></p>
+<br>
+<p>If known:<br>
+<label>Book Publisher</label> <%= text_field_tag :press %></p>
+<p><label>Desired Edition</label> <%= text_field_tag :edition %></p>
+<br>
+
+<%= submit_tag "Add Book" %>
+
+<% end %>

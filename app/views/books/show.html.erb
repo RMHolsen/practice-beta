@@ -1,0 +1,14 @@
+<h2><%= @book.title %> by <%= @book.author %></h2>
+<p><strong><%= @book.press %></strong></p>
+<sub><%= @book.edition %></sub>
+<br>
+
+<%= @book.summary %>
+
+<% if @book.own %>
+<p>You own this book.</p>
+<% else %>
+<p>You want this book.</p>
+<% end %>
+
+<p><%= link_to "Back to Wish List", books_path %></p>

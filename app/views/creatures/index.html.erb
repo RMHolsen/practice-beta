@@ -1,0 +1,6 @@
+<h1>Creature Index</h1>
+<ol>
+<%= @creatures.each do |creature| %>
+<li><%= link_to creature.to_s creature_path(creature) %></li>
+<% end %>
+</ol>

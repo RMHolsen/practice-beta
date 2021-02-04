@@ -1,0 +1,7 @@
+<h1>Research Wish List</h1>
+
+<ol>
+<%= @books.each do |book| %>
+    <li><%= link_to book.title, book_path(book) %> by <%= book.author %></li>
+<% end %>
+</ol>
