@@ -38,6 +38,11 @@ class CreaturesController < ApplicationController
         #Or @creature.update(creature_params)
     end
 
+    def destroy
+        Creature.find(params[:id]).destroy
+        redirect_to creatures_path
+    end 
+
     private
 
     def creature_params

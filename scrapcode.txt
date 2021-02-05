@@ -1,14 +1,15 @@
-<% if @article.errors.any? %>
+<% if @guild.errors.any? %>
 <div id="error_explanation">
   <h2>
-    <%= pluralize(@article.errors.count, "error") %>
-    prohibited this article from being saved:
+    <%= pluralize(@guild.errors.count, "error") %> <!-- There were some errors !-->
+    prohibited this guild from being saved:
   </h2>
 
   <ul>
-  <% @article.errors.full_messages.each do |msg| %>
+  <% @guild.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>
   <% end %>
+  <!-- Iterates over the errors and lists each of them. !-->
   </ul>
 </div>
 <% end %>

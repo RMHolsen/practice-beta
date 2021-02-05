@@ -39,7 +39,7 @@ class BooksController < ApplicationController
         @book.author = params[:author] 
         @book.summary = params[:summary]
         @book.edition = params[:edition] 
-        @book.press = params[:press])
+        @book.press = params[:press]
         @book.save
         #Again, this is the REALLY long way around
         #See Creatures controller

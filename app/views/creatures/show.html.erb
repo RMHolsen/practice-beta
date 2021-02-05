@@ -2,4 +2,8 @@
 
 <p><%= @creature.power %></p>
 
+<%= form_tag creature_path(@creature.id), method: "delete" do %>
+    <%= submit_tag "Delete #{@creature.to_s}" %>
+  <% end %>
+
 <%= link_to "Home" creatures_path %>

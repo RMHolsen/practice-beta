@@ -1,4 +1,16 @@
 <%= form_for(@guild) do |f| %>
+  
+  <div id="error">
+    <% if @guild.errors.any? %>
+      <h2> <%= pluralize(@guild.errors.count, "error") %> prevented this guild from being saved:</h2>
+      <ul>
+      <% @guild.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.label :purpose %>
@@ -6,20 +18,4 @@
     <%= f.label :membership %>
     <%= f.text_field :membership %>
     <%= f.submit %>
-<% end %>
-
-<% if @guild.errors.any? %>
-<div id="error_explanation">
-  <h2>
-    <%= pluralize(@guild.errors.count, "error") %> <!-- There were some errors !-->
-    prohibited this guild from being saved:
-  </h2>
-
-  <ul>
-  <% @guild.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-  <!-- Iterates over the errors and lists each of them. !-->
-  </ul>
-</div>
 <% end %>

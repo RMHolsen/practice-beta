@@ -1,0 +1,6 @@
+<%= form_tag creature_path(@creature), method: "patch", name: "edit_creature", id: "edit_creature" do %>
+    <%= text_field_tag "name", @creature.name %>
+    <%= text_field_tag "epithet", @creature.epithet %>
+    <%= text_field_tag "power", @creature.power %>
+    <%= submit_tag "Update Creature" %>
+  <% end %>
