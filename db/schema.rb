@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210203004457) do
+ActiveRecord::Schema.define(version: 20210206015406) do
 
   create_table "artifacts", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20210203004457) do
     t.string "name"
     t.string "epithet"
     t.string "power"
+    t.string "species"
   end
 
   create_table "guilds", force: :cascade do |t|

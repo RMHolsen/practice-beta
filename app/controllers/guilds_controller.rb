@@ -1,4 +1,5 @@
 class GuildsController < ApplicationController
+    before_action :set_guild, only: [:show, :edit, :update]
     def index
         @guilds = Guild.all
     end
