@@ -2,23 +2,67 @@
 <html>
 <head>
   <title>Practice Crap</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
   <style>
+  body {
+    background-color: #F2F2F2;
+  }
   a {
     text-decoration: none;
+    font-family: Verdana, sans-serif;
+    color: pink;
+  }
+
+  a:visited {
+   color: lightblue;
   }
 
   p {
     font-family: Verdana, sans-serif;
     font-size: 12pt;
   }
+
+  h1, h2, h3, h4 {
+  }
+
+  .menu {
+    margin: 0px 10px 0px 10px;
+    float: left;
+    width: 25%;
+}
+
+.main {
+    margin: 0px 10px 0px 10px;
+    width: 50%;
+    float: left;
+}
+
+#header {
+  color: pink;
+  text-align: center;
+}
   </style>
 </head>
 <body>
+<h1 id="header">Practice Code and Useful Database index</h1>
 
+<div class="menu">
+<h2>Background</h2>
+<%= link_to "Artifacts", artifacts_path %><br>
+<%= link_to "Creatures", creatures_path %><br>
+<%= link_to "Guilds", guilds_path %><br>
+
+<h2>Projects</h2>
+
+<h2>Reference</h2>
+<%= link_to "Book Wish List", books_path %>
+<br><br><br>
+
+<%= link_to "Home", root_path %>
+</div>
+
+<div class="main">
 <%= yield %>
+</div>
 
 </body>
 </html>

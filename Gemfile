@@ -27,7 +27,7 @@ gem 'rails-controller-testing'
 # assert_template has been extracted to a gem. To continue using it, add `gem 'rails-controller-testing'` to your Gemfile.
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

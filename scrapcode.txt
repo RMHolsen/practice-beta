@@ -14,6 +14,14 @@
 </div>
 <% end %>
 
+## STYLESHEET ugh ##
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+## DROP DOWN MENU CODE 
+<p><%= f.collection_select :genre_name, Genre.all, :name, :name %></p>
+
 ## FORM WITH ALLOWANCE FOR ERRORS ##
 
     <%= form_tag("/people") do %>
