@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'artifacts', to: 'artifacts#index'
   get 'artifacts/new', to: 'artifacts#new'#, as: :new_artifact
   post 'artifacts', to: 'artifacts#create'
-  get 'artifacts/:id', to: 'artifacts#show'
+  get 'artifact/:id', to: 'artifacts#show'
   #Remember your order of things, show comes after new and create 
   get 'artifacts/:id/edit', to: 'artifacts#edit', as: :edit_artifact
   patch 'artifacts/:id', to: 'artifacts#update'
@@ -23,12 +23,14 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :creatures, only: [:index, :show, :create, :new, :edit, :update]
+  resources :creatures
   resources :books, only: [:index, :show, :create, :new, :edit, :update]
-  resources :guilds, only: [:index, :show, :create, :new, :edit, :update]
-  resources :users, only: [:index, :show, :create, :new, :edit, :update]
-  resources :projects, only: [:index, :show, :create, :new, :edit, :update]
+  resources :guilds
+  resources :users
+  resources :projects
   resources :genres, only: [:index, :show, :create, :new, :edit, :update]
+  resources :backgrounds 
+  
   # Example resource route with options:
   #   resources :products do
   #     member do

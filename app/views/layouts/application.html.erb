@@ -9,11 +9,11 @@
   a {
     text-decoration: none;
     font-family: Verdana, sans-serif;
-    color: pink;
+    color: hotpink;
   }
 
   a:visited {
-   color: lightblue;
+   color: purple;
   }
 
   p {
@@ -37,7 +37,7 @@
 }
 
 #header {
-  color: pink;
+  color: hotpink;
   text-align: center;
 }
   </style>
@@ -47,11 +47,14 @@
 
 <div class="menu">
 <h2>Background</h2>
-<%= link_to "Artifacts", artifacts_path %><br>
+<!-- <%= link_to "Artifacts", artifacts_path %><br> !-->
 <%= link_to "Creatures", creatures_path %><br>
 <%= link_to "Guilds", guilds_path %><br>
 
 <h2>Projects</h2>
+<%= link_to "Projects", projects_path %><br>
+<%= link_to "Concepts/Backgrounds", backgrounds_path %><br>
+
 
 <h2>Reference</h2>
 <%= link_to "Book Wish List", books_path %>

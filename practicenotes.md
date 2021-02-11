@@ -30,16 +30,21 @@ A user has_many projects
 
 # ProjectsController
 Includes Autocomplete in menu
-Includes custom getter/setter method for genre (Forms and Basic Associations section)
-Model validates type of project for one among a list,  no tests for this yet.
+Includes custom getter/setter method for genre (Forms and Basic Associations section) in order to allow people to create new genres (e.g. Cowboy Bebop)
+Includes an array in the Project model for project types for purposes of generating a drop-down menu. Hopefully other opportunities for drop-down menus will arise though.
 
 # GenresController
 So far only a supporting object for the Projects controller, eventually to have more utility including sort_by methods, etc. 
+
+# BackgroundsController
+Practicing drop-down menu and autocomplete
+Eventually will add a boolean to state whether or not there is an associated project draft
 
 
 ALL DATABASES MIGRATED (2/8/2021)
 (Note: as of Rails 5, models inherit from ApplicationRecord, not ActiveRecord::Base)
 
+
 PRACTICE
 Your associations and syntax types need work <li><%= link_to "#{s.artist_name} - #{s.title}", song_path(s) %></li>
-Practice the skills in the Forms and Basic Associations lab here if you want before you tackle the lab.
+As of 2/11/2021 we are NOT working with the user function in terms of login, logout, and display. Future plans will include having projects display only to the user but all worldbuilding data as free for the taking, but right now we're not working with any security or authorization/verification protocols. Haven't learned it, not going to work with it. 

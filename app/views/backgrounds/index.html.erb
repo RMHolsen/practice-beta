@@ -1,0 +1,7 @@
+<p>
+<% @backgrounds.each do |b| %>
+   <%= b.project %> - <%= link_to b.support_type, background_path(b) %><br>
+<% end %>
+</p>
+
+<%= link_to "Create a new support document", new_background_path %>

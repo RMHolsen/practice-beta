@@ -1,0 +1,15 @@
+<%= form_for @background do |f| %>
+    <p><%= f.label "Project" %> <%= f.text_field :project, list: "projects_autocomplete" %>
+    <datalist id="projects_autocomplete">
+    <% Project.all.each do |project| %>
+        <option value="<%= project.name %>">
+    <% end %>
+    </datalist></p>
+
+    <p><%= f.label "Genre" %> <%= f.collection_select :genre, Genre.all, :name, :name %></p>
+
+    <p><%= f.label "Support Doc Type" %> <%= f.text_field :support_type %></p>
+    <p><%= f.label "File Location" %> <%= f.text_field :file_location %></p>
+    
+    <%= f.submit "Log a Support Document" %>
+<% end %>

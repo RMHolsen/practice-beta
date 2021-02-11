@@ -1,0 +1,7 @@
+<h2>The Artifacts Index</h2>
+
+<% @artifacts.each do |a| %>
+    <%= link_to a.name, artifact_path(a) %>
+<% end %>
+
+<%= link_to "Create an Artifact", artifact_new_path %>

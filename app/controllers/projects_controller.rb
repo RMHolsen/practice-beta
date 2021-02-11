@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
     before_action :set_project, only: [:show, :edit, :update]
+
     def index
         @projects = Project.all 
     end 
@@ -12,9 +13,10 @@ class ProjectsController < ApplicationController
     end 
 
     def create
-        Project.new(project_params)
+        @project = Project.new(project_params)
         if @project.valid?
             @project.save
+            redirect_to project_path(@project)
         else 
             render :new
         end 
@@ -37,7 +39,7 @@ class ProjectsController < ApplicationController
     private
 
     def project_params
-        params.require(:project).permit(:name, :type, :summary, :genre_name, :word_count, :user_id)
+        params.require(:project).permit(:name, :length, :summary, :genre_name, :word_count, :user_id)
     end 
 
     def set_project
