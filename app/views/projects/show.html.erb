@@ -4,3 +4,9 @@
 <p><%= @project.genre.name %> - <%= @project.display_count %> words<br>
 <%= @project.length %></p>
 <p><%= @project.summary %></p>
+
+<h2>Background Documents</h2>
+<p><% @project.backgrounds.each do |b| %>
+    <%= b.support_type %> - <%= b.file_location %>
+<% end %>
+</p>

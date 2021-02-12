@@ -1,19 +1,3 @@
-<% if @guild.errors.any? %>
-<div id="error_explanation">
-  <h2>
-    <%= pluralize(@guild.errors.count, "error") %> <!-- There were some errors !-->
-    prohibited this guild from being saved:
-  </h2>
-
-  <ul>
-  <% @guild.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-  <!-- Iterates over the errors and lists each of them. !-->
-  </ul>
-</div>
-<% end %>
-
 ## STYLESHEET ugh ##
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -31,6 +15,33 @@ Generating the following code
   <option value="value_method">text_method</option>
   <option value="value_method">text_method</option>
 
+## CHECKBOXES ##
+<% category.all.each do |c| %>
+<label for="category_id_<%= c.id %>" <%= c.name %></label>
+<input type="checkbox" name="post[category_ids][]" value="<%= c.id %>">
+
+checkbox type, name feeds into an array in the params, value = the id for each category 
+
+<% end %>
+
+and then in the controller it would be :category_ids => []
+
+and then in the model
+
+  def category_ids=(array)
+    array.each do |x|
+      notes = Note.create(content: x)
+      #Note.find_or_create_by if you don't want content to duplicate in the Notes.all 
+      self.notes << note 
+    end 
+  end 
+
+  def category_ids
+    self.notes ? self.notes.map { |c| c.content } : nil
+    #If ? then 1 : then 2
+  end 
+
+Different material but basically the same thing, maybe figure out later how best to practice this. 
 
 ## FORM WITH ALLOWANCE FOR ERRORS ##
 
@@ -59,3 +70,19 @@ Generating the following code
      
       <%= submit_tag "Create" %>
     <% end %>
+
+    <% if @guild.errors.any? %>
+<div id="error_explanation">
+  <h2>
+    <%= pluralize(@guild.errors.count, "error") %> <!-- There were some errors !-->
+    prohibited this guild from being saved:
+  </h2>
+
+  <ul>
+  <% @guild.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  <!-- Iterates over the errors and lists each of them. !-->
+  </ul>
+</div>
+<% end %>

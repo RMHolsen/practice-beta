@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210211220943) do
+ActiveRecord::Schema.define(version: 20210212013229) do
 
   create_table "artifacts", force: :cascade do |t|
     t.string "name"
@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20210211220943) do
   end
 
   create_table "backgrounds", force: :cascade do |t|
-    t.string "project"
-    t.string "genre"
-    t.string "support_type"
-    t.string "file_location"
+    t.string  "genre"
+    t.string  "support_type"
+    t.string  "file_location"
+    t.integer "project_id"
   end
 
   create_table "books", force: :cascade do |t|

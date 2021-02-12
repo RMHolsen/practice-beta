@@ -1,6 +1,6 @@
 <p>
 <% @backgrounds.each do |b| %>
-   <%= b.project %> - <%= link_to b.support_type, background_path(b) %><br>
+   <%= b.project.name %> - <%= link_to b.support_type, background_path(b) %><br>
 <% end %>
 </p>
 

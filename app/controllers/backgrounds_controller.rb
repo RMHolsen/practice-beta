@@ -35,7 +35,7 @@ class BackgroundsController < ApplicationController
     private
 
     def bg_params
-        params.require(:background).permit(:project, :genre, :file_location, :support_type)
+        params.require(:background).permit(:genre, :support_type, :file_location, :project_id)
     end 
 
     def set_background

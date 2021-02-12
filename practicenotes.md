@@ -37,8 +37,9 @@ Includes an array in the Project model for project types for purposes of generat
 So far only a supporting object for the Projects controller, eventually to have more utility including sort_by methods, etc. 
 
 # BackgroundsController
-Practicing drop-down menu and autocomplete
+Practicing drop-down menu to select a project to assign a background file
 Eventually will add a boolean to state whether or not there is an associated project draft
+Tried to create an array of file locations, didn't work because the original associated file type can't be a string
 
 
 ALL DATABASES MIGRATED (2/8/2021)
