@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Practice Crap</title>
+  <title>The Workshop</title>
   <style>
   body {
     background-color: #F2F2F2;
@@ -43,9 +43,12 @@
   </style>
 </head>
 <body>
-<h1 id="header">Practice Code and Useful Database index</h1>
+<h1 id="header">The Workshop, Web Dev Version</h1>
 
 <div class="menu">
+<p><%= link_to "Home", root_path %><br>
+<p><%= link_to "About the Workshop", about_path %></p>
+
 <h2>Background</h2>
 <!-- <%= link_to "Artifacts", artifacts_path %><br> !-->
 <%= link_to "Creatures", creatures_path %><br>
@@ -60,7 +63,6 @@
 <%= link_to "Book Wish List", books_path %>
 <br><br><br>
 
-<%= link_to "Home", root_path %>
 </div>
 
 <div class="main">

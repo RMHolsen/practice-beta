@@ -13,3 +13,10 @@ Tidied up the views some, created a background documents tracker which might be 
 In the pm, reworked the background documents so that they are created associating with a project (not included in validations), attempted to make an array out of multiple file locations but ran into problems because ActiveRecord already had that as a string. Whoops. There is no 'array' datatype in AR.
 BUG NOTE: What the fuck is going on with the artifact routes. That's a few sections later, I guess. 
 
+# 12 February 2021
+Added a samples file for all the scrap code accumulated, each lesson that has some code to learn goes in there with explanations.
+Scrap code will now be used for code that was entered, now scrapped, to look over to find out what was wrong with it.
+Also for random things that I'll want to remember later but have no idea what they're doing now. Like stylesheets. Complicated, JavaScript-having stylesheets.
+Updated the about and home pages. Made an about page, in general. 
+Too tired to do anything on the to-do list.
+

@@ -3,17 +3,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-## DROP DOWN MENU CODE 
-<%= f.collection_select :genre_name, Genre.all, :name, :name %>
-collection_select(object, method, collection, value_method, text_method)
 
-In the form_for method the object is already determined as form_for(@object)
-So the format is thus: f.collection_select :method, Collection.all/@collections, :value_method, :text_method
-Generating the following code
-
-<select name="song[method]" id="song_method">
-  <option value="value_method">text_method</option>
-  <option value="value_method">text_method</option>
 
 ## CHECKBOXES ##
 <% category.all.each do |c| %>
@@ -43,46 +33,3 @@ and then in the model
 
 Different material but basically the same thing, maybe figure out later how best to practice this. 
 
-## FORM WITH ALLOWANCE FOR ERRORS ##
-
-    <%= form_tag("/people") do %>
-      <% if @person.errors.any? %>
-        <div id="error_explanation">
-          <h2>There were some errors:</h2>
-          <ul>
-            <% @person.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-     
-     
-      <div class="field<%= ' field_with_errors' if @person.errors[:name].any? %>">
-        <%= label_tag "name", "Name" %>
-        <%= text_field_tag "name", @person.name %>
-      </div>
-     
-      <div class="field<%= ' field_with_errors' if @person.errors[:email].any? %>">
-        <%= label_tag "email", "Email" %>
-        <%= text_field_tag "email", @person.email %>
-      </div>
-     
-      <%= submit_tag "Create" %>
-    <% end %>
-
-    <% if @guild.errors.any? %>
-<div id="error_explanation">
-  <h2>
-    <%= pluralize(@guild.errors.count, "error") %> <!-- There were some errors !-->
-    prohibited this guild from being saved:
-  </h2>
-
-  <ul>
-  <% @guild.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-  <!-- Iterates over the errors and lists each of them. !-->
-  </ul>
-</div>
-<% end %>
