@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   get 'about', to: 'static#about'
+  get 'rngesus', to: 'static#rngesus'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
   resources :guilds
   resources :users
   resources :projects
+  patch 'projects/:id', to: 'projects#update'
   resources :genres, only: [:index, :show, :create, :new, :edit, :update]
   resources :backgrounds 
   

@@ -32,6 +32,7 @@ A user has_many projects
 Includes Autocomplete in menu
 Includes custom getter/setter method for genre (Forms and Basic Associations section) in order to allow people to create new genres (e.g. Cowboy Bebop)
 Includes an array in the Project model for project types for purposes of generating a drop-down menu. Hopefully other opportunities for drop-down menus will arise though.
+Helpers and layouts added in layouts and helpers. 
 
 # GenresController
 So far only a supporting object for the Projects controller, eventually to have more utility including sort_by methods, etc. 
@@ -42,7 +43,7 @@ Eventually will add a boolean to state whether or not there is an associated pro
 Tried to create an array of file locations, didn't work because the original associated file type can't be a string
 
 
-ALL DATABASES MIGRATED (2/8/2021)
+ALL DATABASES MIGRATED (2/16/2021)
 (Note: as of Rails 5, models inherit from ApplicationRecord, not ActiveRecord::Base)
 
 

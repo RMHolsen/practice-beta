@@ -20,3 +20,8 @@ Also for random things that I'll want to remember later but have no idea what th
 Updated the about and home pages. Made an about page, in general. 
 Too tired to do anything on the to-do list.
 
+# 16 February 2021
+Added helpers in application_helper: updated at date-time (ultimately ended up putting this on the project index page)
+Added edit views to projects
+Moved edit project link to separate layout for project show method(action? fuck terminology)
+Added helper in project helper to do an if/then for background documents, needs some debugging.

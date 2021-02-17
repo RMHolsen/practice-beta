@@ -10,35 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210212013229) do
+ActiveRecord::Schema.define(version: 20210217002436) do
 
   create_table "artifacts", force: :cascade do |t|
-    t.string "name"
-    t.string "creator"
-    t.string "power"
+    t.string   "name"
+    t.string   "creator"
+    t.string   "power"
+    t.datetime "updated_at"
   end
 
   create_table "backgrounds", force: :cascade do |t|
-    t.string  "genre"
-    t.string  "support_type"
-    t.string  "file_location"
-    t.integer "project_id"
+    t.string   "genre"
+    t.string   "support_type"
+    t.string   "file_location"
+    t.integer  "project_id"
+    t.datetime "updated_at"
   end
 
   create_table "books", force: :cascade do |t|
-    t.string  "title"
-    t.string  "author"
-    t.text    "summary"
-    t.string  "edition"
-    t.string  "press"
-    t.boolean "own"
+    t.string   "title"
+    t.string   "author"
+    t.text     "summary"
+    t.string   "edition"
+    t.string   "press"
+    t.boolean  "own"
+    t.datetime "updated_at"
   end
 
   create_table "creatures", force: :cascade do |t|
-    t.string "name"
-    t.string "epithet"
-    t.string "power"
-    t.string "species"
+    t.string   "name"
+    t.string   "epithet"
+    t.string   "power"
+    t.string   "species"
+    t.datetime "updated_at"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -46,18 +50,20 @@ ActiveRecord::Schema.define(version: 20210212013229) do
   end
 
   create_table "guilds", force: :cascade do |t|
-    t.string  "name"
-    t.string  "purpose"
-    t.integer "membership"
+    t.string   "name"
+    t.string   "purpose"
+    t.integer  "membership"
+    t.datetime "updated_at"
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string  "name"
-    t.string  "length"
-    t.text    "summary"
-    t.integer "word_count"
-    t.integer "user_id"
-    t.integer "genre_id"
+    t.string   "name"
+    t.string   "length"
+    t.text     "summary"
+    t.integer  "word_count"
+    t.integer  "user_id"
+    t.integer  "genre_id"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,3 +1,7 @@
+<% @project.backgrounds.each do |b| %>
+    <%= b.support_type %> - <%= b.file_location %> 
+<% end %>
+
 ## STYLESHEET ugh ##
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

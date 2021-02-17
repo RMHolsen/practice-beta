@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Workshop</title>
+  <style>
+  body {
+    background-color: #F2F2F2;
+  }
+  a {
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    color: hotpink;
+  }
+
+  a:visited {
+   color: purple;
+  }
+
+  p {
+    font-family: Verdana, sans-serif;
+    font-size: 12pt;
+  }
+
+  h1, h2, h3, h4 {
+  }
+
+  .menu {
+    margin: 0px 10px 0px 10px;
+    float: left;
+    width: 25%;
+}
+
+.main {
+    margin: 0px 10px 0px 10px;
+    width: 50%;
+    float: left;
+}
+
+#header {
+  color: hotpink;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+<h1 id="header">The Workshop, Web Dev Version - Project Organization</h1>
+
+<div class="menu">
+<p><%= link_to "Home", root_path %><br>
+<p><%= link_to "About the Workshop", about_path %></p>
+
+<h2>Background</h2>
+<!-- <%= link_to "Artifacts", artifacts_path %><br> !-->
+<%= link_to "Creatures", creatures_path %><br>
+<%= link_to "Guilds", guilds_path %><br>
+
+<h2>Projects</h2>
+<%= link_to "Projects", projects_path %><br>
+<%= link_to "Background", backgrounds_path %><br>
+
+
+<h2>Reference</h2>
+<%= link_to "Book Wish List", books_path %>
+<br><br><br>
+
+<%= link_to "Edit This Project", edit_project_path(@project) %>
+</div>
+
+<div class="main">
+<%= yield %>
+</div>
+
+</body>
+</html>
